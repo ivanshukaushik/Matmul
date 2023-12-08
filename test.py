@@ -44,8 +44,15 @@ for input_shape in inputs:
 
     print(alpha == strassen == naive)
     # print(time_naive, time_strassen, time_alpha)
+    print(f'Done for input shape: {input_shape}')
 
 
-plt.plot(inputs, time_naive_list)
-plt.plot(inputs, time_strassen_list, '-')
-plt.plot(inputs, time_alpha_list, '-.')
+plt.plot(inputs, time_naive_list, color = 'red')
+plt.plot(inputs, time_parellal_list, '-.', color = 'green')
+plt.plot(inputs, time_strassen_list, '-', color = 'blue')
+plt.plot(inputs, time_alpha_list, '-', color = 'yellow')
+plt.xlabel("input size") 
+plt.ylabel("Time taken (in milliseconds)") 
+plt.title('Comparison of different Matrix Multiplication Algorithms') 
+plt.legend()
+plt.show()
