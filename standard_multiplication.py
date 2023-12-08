@@ -3,7 +3,7 @@ from matrix_util import timer
 
 import gevent
 
-@timer
+# @timer
 def naive_square_matrix_product(A, B):
     """ Implementation of naive squre matrix multiplication algorithm """
     n = len(A)
@@ -16,7 +16,7 @@ def naive_square_matrix_product(A, B):
     return C
 
 
-@timer
+# @timer
 def parallel_square_matrix_product(A, B):
     """ Implementation of parallel version of
         naive squre matrix multiplication algorithm

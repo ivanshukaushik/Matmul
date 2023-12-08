@@ -18,3 +18,12 @@ def timer(func):
         return value
 
     return wrapper
+
+def timer2(func):
+    def f(args):
+        t1 = time.perf_counter()
+        ret = func(args)
+        t2 = time.perf_counter()
+        print('execution time: {}'.format(t2-t1))
+        return ret
+    return f
